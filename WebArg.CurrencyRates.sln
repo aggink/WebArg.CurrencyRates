@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates", "WebArg.CurrencyRates\WebArg.CurrencyRates.csproj", "{DB191B0A-7819-4758-A6BD-FD68E6E5058F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates.Storage", "WebArg.CurrencyRates.Storage\WebArg.CurrencyRates.Storage.csproj", "{4E8A4DF9-3094-4EFB-95CD-F9948C5C9B7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB191B0A-7819-4758-A6BD-FD68E6E5058F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB191B0A-7819-4758-A6BD-FD68E6E5058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB191B0A-7819-4758-A6BD-FD68E6E5058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB191B0A-7819-4758-A6BD-FD68E6E5058F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8A4DF9-3094-4EFB-95CD-F9948C5C9B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8A4DF9-3094-4EFB-95CD-F9948C5C9B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8A4DF9-3094-4EFB-95CD-F9948C5C9B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8A4DF9-3094-4EFB-95CD-F9948C5C9B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {816FE1B4-52D2-4F7E-9E30-82F76DF83735}
+	EndGlobalSection
+EndGlobal
