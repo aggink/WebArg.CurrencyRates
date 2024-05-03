@@ -1,0 +1,13 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationMarkdown>$(MSBuildProjectDirectory)\Readme.md</DocumentationMarkdown>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Vsxmd" Version="1.4.4" />
+  </ItemGroup>
+  
+</Project>

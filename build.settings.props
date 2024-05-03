@@ -1,0 +1,12 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RuntimeFrameworkVersion>8.0.0</RuntimeFrameworkVersion>
+		<LangVersion>12.0</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+	
+</Project>
