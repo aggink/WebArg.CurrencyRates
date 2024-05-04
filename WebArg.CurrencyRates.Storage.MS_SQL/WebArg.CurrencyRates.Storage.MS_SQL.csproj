@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\build.settings.props" />
+  <Import Project="..\ReadmeGeneration.props" />
+  
+  <ItemGroup>
+  	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+  		<PrivateAssets>all</PrivateAssets>
+  		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+  	</PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\WebArg.CurrencyRates.Storage\WebArg.CurrencyRates.Storage.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
