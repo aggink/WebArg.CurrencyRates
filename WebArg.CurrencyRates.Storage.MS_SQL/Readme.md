@@ -13,6 +13,7 @@
   - [Up()](#M-WebArg-CurrencyRates-Storage-MS_SQL-Migrations-InitQuartz-Up-Microsoft-EntityFrameworkCore-Migrations-MigrationBuilder- 'WebArg.CurrencyRates.Storage.MS_SQL.Migrations.InitQuartz.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)')
 - [MigrationService](#T-WebArg-CurrencyRates-Storage-MS_SQL-Services-MigrationService 'WebArg.CurrencyRates.Storage.MS_SQL.Services.MigrationService')
   - [ApplyMigrations()](#M-WebArg-CurrencyRates-Storage-MS_SQL-Services-MigrationService-ApplyMigrations 'WebArg.CurrencyRates.Storage.MS_SQL.Services.MigrationService.ApplyMigrations')
+- [SqlServerContextFactory](#T-WebArg-CurrencyRates-Storage-MS_SQL-SqlServerContextFactory 'WebArg.CurrencyRates.Storage.MS_SQL.SqlServerContextFactory')
 
 <a name='T-WebArg-CurrencyRates-Storage-MS_SQL-Migrations-InitDatabase'></a>
 ## InitDatabase `type`
@@ -127,3 +128,14 @@ True - миграции применены успешно
 ##### Parameters
 
 This method has no parameters.
+
+<a name='T-WebArg-CurrencyRates-Storage-MS_SQL-SqlServerContextFactory'></a>
+## SqlServerContextFactory `type`
+
+##### Namespace
+
+WebArg.CurrencyRates.Storage.MS_SQL
+
+##### Summary
+
+Фабрика для создания производных [DataContext](#T-WebArg-CurrencyRates-Storage-Database-DataContext 'WebArg.CurrencyRates.Storage.Database.DataContext') экземпляров

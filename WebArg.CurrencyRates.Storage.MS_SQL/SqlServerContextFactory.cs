@@ -4,6 +4,9 @@ using WebArg.CurrencyRates.Storage.Database;
 
 namespace WebArg.CurrencyRates.Storage.MS_SQL;
 
+/// <summary>
+/// Фабрика для создания производных <see cref="DataContext"/> экземпляров
+/// </summary>
 public sealed class SqlServerContextFactory : IDesignTimeDbContextFactory<DataContext>
 {
     private const string DbConnectionString = "Server=localhost,1433;Database=CurrencyRatesDb;User ID=sa;Password=<YourStrong@Passw0rd>;MultipleActiveResultSets=true;TrustServerCertificate=True";
