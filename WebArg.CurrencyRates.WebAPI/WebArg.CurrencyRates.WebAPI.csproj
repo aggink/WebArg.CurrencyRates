@@ -4,11 +4,16 @@
   <Import Project="..\ReadmeGeneration.props" />
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  	<PackageReference Include="MediatR" Version="12.2.0" />
+  	<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+	<PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+  	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  	<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\WebArg.CurrencyRates.Logic\WebArg.CurrencyRates.Logic.csproj" />
+    <ProjectReference Include="..\WebArg.CurrencyRates.Web.Common\WebArg.CurrencyRates.Web.Common.csproj" />
   </ItemGroup>
 
 </Project>

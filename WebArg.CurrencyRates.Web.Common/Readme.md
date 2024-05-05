@@ -10,9 +10,9 @@
 - [ErrorResponseDto](#T-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponseDto 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponseDto')
   - [Response](#P-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponseDto-Response 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponseDto.Response')
   - [StatusCode](#P-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponseDto-StatusCode 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponseDto.StatusCode')
-- [ExceptionMiddleware](#T-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionMiddleware')
-  - [GetErrorResponse(context,ex)](#M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware-GetErrorResponse-Microsoft-AspNetCore-Http-HttpContext,System-Exception- 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionMiddleware.GetErrorResponse(Microsoft.AspNetCore.Http.HttpContext,System.Exception)')
-  - [GetErrorResponseBase(context,ex)](#M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware-GetErrorResponseBase-Microsoft-AspNetCore-Http-HttpContext,System-Exception- 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionMiddleware.GetErrorResponseBase(Microsoft.AspNetCore.Http.HttpContext,System.Exception)')
+- [ExceptionBaseMiddleware](#T-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionBaseMiddleware')
+  - [GetErrorResponse(context,ex)](#M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware-GetErrorResponse-Microsoft-AspNetCore-Http-HttpContext,System-Exception- 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionBaseMiddleware.GetErrorResponse(Microsoft.AspNetCore.Http.HttpContext,System.Exception)')
+  - [GetErrorResponseBase(context,ex)](#M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware-GetErrorResponseBase-Microsoft-AspNetCore-Http-HttpContext,System-Exception- 'WebArg.CurrencyRates.Web.Common.Middlewares.ExceptionBaseMiddleware.GetErrorResponseBase(Microsoft.AspNetCore.Http.HttpContext,System.Exception)')
 - [FluentValidationModelState](#T-WebArg-CurrencyRates-Web-Common-DataAnnotations-DtoModels-FluentValidationModelState 'WebArg.CurrencyRates.Web.Common.DataAnnotations.DtoModels.FluentValidationModelState')
   - [Errors](#P-WebArg-CurrencyRates-Web-Common-DataAnnotations-DtoModels-FluentValidationModelState-Errors 'WebArg.CurrencyRates.Web.Common.DataAnnotations.DtoModels.FluentValidationModelState.Errors')
 - [ValidateUsingFluentValidationAttribute](#T-WebArg-CurrencyRates-Web-Common-DataAnnotations-ValidateUsingFluentValidationAttribute 'WebArg.CurrencyRates.Web.Common.DataAnnotations.ValidateUsingFluentValidationAttribute')
@@ -77,8 +77,8 @@ WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels
 
 HTTP-статус
 
-<a name='T-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware'></a>
-## ExceptionMiddleware `type`
+<a name='T-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware'></a>
+## ExceptionBaseMiddleware `type`
 
 ##### Namespace
 
@@ -88,7 +88,7 @@ WebArg.CurrencyRates.Web.Common.Middlewares
 
 Обработчик ошибок
 
-<a name='M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware-GetErrorResponse-Microsoft-AspNetCore-Http-HttpContext,System-Exception-'></a>
+<a name='M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware-GetErrorResponse-Microsoft-AspNetCore-Http-HttpContext,System-Exception-'></a>
 ### GetErrorResponse(context,ex) `method`
 
 ##### Summary
@@ -106,7 +106,7 @@ WebArg.CurrencyRates.Web.Common.Middlewares
 | context | [Microsoft.AspNetCore.Http.HttpContext](#T-Microsoft-AspNetCore-Http-HttpContext 'Microsoft.AspNetCore.Http.HttpContext') | HTTP-контекст |
 | ex | [System.Exception](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Exception 'System.Exception') | Ошибка |
 
-<a name='M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionMiddleware-GetErrorResponseBase-Microsoft-AspNetCore-Http-HttpContext,System-Exception-'></a>
+<a name='M-WebArg-CurrencyRates-Web-Common-Middlewares-ExceptionBaseMiddleware-GetErrorResponseBase-Microsoft-AspNetCore-Http-HttpContext,System-Exception-'></a>
 ### GetErrorResponseBase(context,ex) `method`
 
 ##### Summary

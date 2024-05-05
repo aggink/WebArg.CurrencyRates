@@ -8,12 +8,12 @@ namespace WebArg.CurrencyRates.Web.Common.Middlewares;
 /// <summary>
 /// Обработчик ошибок
 /// </summary>
-public abstract class ExceptionMiddleware
+public abstract class ExceptionBaseMiddleware
 {
     private readonly RequestDelegate _next;
     private readonly ILogger _logger;
 
-    public ExceptionMiddleware(
+    public ExceptionBaseMiddleware(
         RequestDelegate next,
         ILogger logger)
     {

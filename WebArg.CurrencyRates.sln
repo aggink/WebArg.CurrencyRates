@@ -15,11 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ReadmeGeneration.props = ReadmeGeneration.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates.Storage.MS_SQL", "WebArg.CurrencyRates.Storage.MS_SQL\WebArg.CurrencyRates.Storage.MS_SQL.csproj", "{3F596E0E-F8B9-4B92-B967-F6CDAF076BAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebArg.CurrencyRates.Storage.MS_SQL", "WebArg.CurrencyRates.Storage.MS_SQL\WebArg.CurrencyRates.Storage.MS_SQL.csproj", "{3F596E0E-F8B9-4B92-B967-F6CDAF076BAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates.Cron", "WebArg.CurrencyRates.Cron\WebArg.CurrencyRates.Cron.csproj", "{CB347624-3128-454E-86F4-357F51F41913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebArg.CurrencyRates.Cron", "WebArg.CurrencyRates.Cron\WebArg.CurrencyRates.Cron.csproj", "{CB347624-3128-454E-86F4-357F51F41913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates.Logic", "WebArg.CurrencyRates.Logic\WebArg.CurrencyRates.Logic.csproj", "{174186A7-BF92-4752-9E04-7973FBF1DB40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebArg.CurrencyRates.Logic", "WebArg.CurrencyRates.Logic\WebArg.CurrencyRates.Logic.csproj", "{174186A7-BF92-4752-9E04-7973FBF1DB40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArg.CurrencyRates.Web.Common", "WebArg.CurrencyRates.Web.Common\WebArg.CurrencyRates.Web.Common.csproj", "{94647822-215D-401E-A0C7-9663BDE1A95D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{174186A7-BF92-4752-9E04-7973FBF1DB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{174186A7-BF92-4752-9E04-7973FBF1DB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{174186A7-BF92-4752-9E04-7973FBF1DB40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94647822-215D-401E-A0C7-9663BDE1A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94647822-215D-401E-A0C7-9663BDE1A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94647822-215D-401E-A0C7-9663BDE1A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94647822-215D-401E-A0C7-9663BDE1A95D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
