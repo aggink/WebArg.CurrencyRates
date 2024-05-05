@@ -13,5 +13,5 @@ public interface ICronService
     /// <param name="date">Дата</param>
     /// <param name="cancellationToken">Токен отмены</param>
     /// <returns>Курс чешской кроны за запрашиваемую дату</returns>
-    Task<ReportDailyDto> GetReportsAsync(DateOnly date, CancellationToken cancellationToken);
+    Task<ReportDailyDto> GetReportAsync(DateOnly date, CancellationToken cancellationToken);
 }

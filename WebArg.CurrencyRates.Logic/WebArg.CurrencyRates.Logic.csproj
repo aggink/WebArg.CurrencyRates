@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\build.settings.props" />
+  <Import Project="..\ReadmeGeneration.props" />
+
+  <ItemGroup>
+  	<PackageReference Include="AutoMapper" Version="13.0.1" />
+  	<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebArg.CurrencyRates.Cron\WebArg.CurrencyRates.Cron.csproj" />
+    <ProjectReference Include="..\WebArg.CurrencyRates.Storage.MS_SQL\WebArg.CurrencyRates.Storage.MS_SQL.csproj" />
+  </ItemGroup>
+
+</Project>
