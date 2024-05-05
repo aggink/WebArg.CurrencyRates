@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\build.settings.props" />
+  <Import Project="..\ReadmeGeneration.props" />
+  
+  <ItemGroup>
+  	<PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
+  </ItemGroup>
+	
+</Project>
