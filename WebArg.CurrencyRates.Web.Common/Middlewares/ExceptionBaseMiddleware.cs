@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System.Net;
 using WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels;
+using WebArg.CurrencyRates.WebAPI.Exceptions;
 
 namespace WebArg.CurrencyRates.Web.Common.Middlewares;
 
@@ -54,33 +55,41 @@ public abstract class ExceptionBaseMiddleware
     /// <returns>Описание ошибки</returns>
     private ErrorResponseDto GetErrorResponseBase(HttpContext context, Exception ex)
     {
-        if (ex is OperationCanceledException canceledException && context.RequestAborted.IsCancellationRequested)
+        switch (ex)
         {
-            return new ErrorResponseDto
-            {
-                StatusCode = HttpStatusCode.BadRequest,
-                Response = new ErrorResponse
+            case ArgumentQueryException queryException:
+                return new ErrorResponseDto
                 {
-                    Code = canceledException.HResult.ToString(),
-                    Message = "Запрос был отменен"
-                }
-            };
-        }
-
-        var response = GetErrorResponse(context, ex);
-        if (response == null)
-        {
-            return new ErrorResponseDto
-            {
-                StatusCode = HttpStatusCode.InternalServerError,
-                Response = new ErrorResponse
+                    StatusCode = HttpStatusCode.BadRequest,
+                    Response = new ErrorResponse
+                    {
+                        Code = queryException.HResult.ToString(),
+                        Message = queryException.Message
+                    }
+                };
+            case OperationCanceledException canceledException
+                when context.RequestAborted.IsCancellationRequested:
+                return new ErrorResponseDto
                 {
-                    Code = ex.HResult.ToString(),
-                    Message = "Что-то пошло не так. Пожалуйста, повторите попытку позже"
-                }
-            };
+                    StatusCode = HttpStatusCode.BadRequest,
+                    Response = new ErrorResponse
+                    {
+                        Code = canceledException.HResult.ToString(),
+                        Message = "Запрос был отменен"
+                    }
+                };
+            default:
+                var response = GetErrorResponse(context, ex);
+                if (response != null) return response;
+                return new ErrorResponseDto
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Response = new ErrorResponse
+                    {
+                        Code = ex.HResult.ToString(),
+                        Message = "Что-то пошло не так. Пожалуйста, повторите попытку позже"
+                    }
+                };
         }
-
-        return response;
     }
 }

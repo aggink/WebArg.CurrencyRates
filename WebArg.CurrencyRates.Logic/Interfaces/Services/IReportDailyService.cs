@@ -21,12 +21,12 @@ public interface IReportDailyService
     Task<ReportDto[]> GetReportAsync(DataContext dataContext, DateOnly start, DateOnly end, string[] codes, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Сохранить данные о курсе валют
+    /// Скачать данные о курсе валют
     /// </summary>
     /// <param name="dataContext">Контекст базы данных</param>
     /// <param name="start">Начало периода</param>
     /// <param name="end">Конец периода</param>
     /// <param name="cancellationToken">Токен отмены</param>
     /// <returns><see cref="Task"/></returns>
-    Task AddReportAsync(DataContext dataContext, DateOnly start, DateOnly end, CancellationToken cancellationToken = default);
+    Task DownloadReportAsync(DataContext dataContext, DateOnly start, DateOnly end, CancellationToken cancellationToken = default);
 }

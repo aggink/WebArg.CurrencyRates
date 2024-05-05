@@ -3,7 +3,7 @@ using WebArg.CurrencyRates.Logic.Exceptions;
 using WebArg.CurrencyRates.Web.Common.Middlewares;
 using WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels;
 
-namespace WebArg.CurrencyRates.WebAPI.Middlewares;
+namespace WebArg.CurrencyRates.Quartz.Middlewares;
 
 /// <summary>
 /// Обработчик ошибок

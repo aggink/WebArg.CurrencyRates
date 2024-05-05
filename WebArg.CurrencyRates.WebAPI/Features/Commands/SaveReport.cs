@@ -61,7 +61,7 @@ public sealed class SaveReportCommandHandler : IRequestHandler<SaveReportCommand
 
     public async Task Handle(SaveReportCommand request, CancellationToken cancellationToken)
     {
-        await _reportDailyService.AddReportAsync(_dataContext, request.Report.StartDate, request.Report.EndDate, cancellationToken);
+        await _reportDailyService.DownloadReportAsync(_dataContext, request.Report.StartDate, request.Report.EndDate, cancellationToken);
         await _dataContext.SaveChangesAsync(cancellationToken);
     }
 }

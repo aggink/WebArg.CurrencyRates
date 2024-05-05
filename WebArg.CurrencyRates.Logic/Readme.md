@@ -6,7 +6,7 @@
 - [ConfigurationExtensions](#T-WebArg-CurrencyRates-Logic-Extensions-ConfigurationExtensions 'WebArg.CurrencyRates.Logic.Extensions.ConfigurationExtensions')
   - [GetDefaultConnectionString(configuration)](#M-WebArg-CurrencyRates-Logic-Extensions-ConfigurationExtensions-GetDefaultConnectionString-Microsoft-Extensions-Configuration-IConfiguration- 'WebArg.CurrencyRates.Logic.Extensions.ConfigurationExtensions.GetDefaultConnectionString(Microsoft.Extensions.Configuration.IConfiguration)')
 - [IReportDailyService](#T-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService 'WebArg.CurrencyRates.Logic.Interfaces.Services.IReportDailyService')
-  - [AddReportAsync(dataContext,start,end,cancellationToken)](#M-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService-AddReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,System-DateOnly,System-DateOnly,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Logic.Interfaces.Services.IReportDailyService.AddReportAsync(WebArg.CurrencyRates.Storage.Database.DataContext,System.DateOnly,System.DateOnly,System.Threading.CancellationToken)')
+  - [DownloadReportAsync(dataContext,start,end,cancellationToken)](#M-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService-DownloadReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,System-DateOnly,System-DateOnly,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Logic.Interfaces.Services.IReportDailyService.DownloadReportAsync(WebArg.CurrencyRates.Storage.Database.DataContext,System.DateOnly,System.DateOnly,System.Threading.CancellationToken)')
   - [GetReportAsync(dataContext,start,end,codes,cancellationToken)](#M-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService-GetReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,System-DateOnly,System-DateOnly,System-String[],System-Threading-CancellationToken- 'WebArg.CurrencyRates.Logic.Interfaces.Services.IReportDailyService.GetReportAsync(WebArg.CurrencyRates.Storage.Database.DataContext,System.DateOnly,System.DateOnly,System.String[],System.Threading.CancellationToken)')
 - [IRepository](#T-WebArg-CurrencyRates-Logic-Interfaces-Repositories-IRepository 'WebArg.CurrencyRates.Logic.Interfaces.Repositories.IRepository')
   - [AddReportAsync(dataContext,report,cancellationToken)](#M-WebArg-CurrencyRates-Logic-Interfaces-Repositories-IRepository-AddReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,WebArg-CurrencyRates-Cron-DtoModels-ReportDailyDto,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Logic.Interfaces.Repositories.IRepository.AddReportAsync(WebArg.CurrencyRates.Storage.Database.DataContext,WebArg.CurrencyRates.Cron.DtoModels.ReportDailyDto,System.Threading.CancellationToken)')
@@ -44,7 +44,7 @@ WebArg.CurrencyRates.Logic.Extensions
 
 ##### Returns
 
-
+Строка подключения к БД
 
 ##### Parameters
 
@@ -69,12 +69,12 @@ WebArg.CurrencyRates.Logic.Interfaces.Services
 
 Сервис обработки данные для [ReportDaily](#T-WebArg-CurrencyRates-Storage-Models-ReportDaily 'WebArg.CurrencyRates.Storage.Models.ReportDaily')
 
-<a name='M-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService-AddReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,System-DateOnly,System-DateOnly,System-Threading-CancellationToken-'></a>
-### AddReportAsync(dataContext,start,end,cancellationToken) `method`
+<a name='M-WebArg-CurrencyRates-Logic-Interfaces-Services-IReportDailyService-DownloadReportAsync-WebArg-CurrencyRates-Storage-Database-DataContext,System-DateOnly,System-DateOnly,System-Threading-CancellationToken-'></a>
+### DownloadReportAsync(dataContext,start,end,cancellationToken) `method`
 
 ##### Summary
 
-Сохранить данные о курсе валют
+Скачать данные о курсе валют
 
 ##### Returns
 
@@ -160,7 +160,7 @@ WebArg.CurrencyRates.Logic.Services
 
 ##### Summary
 
-Сервис обработки данные для [](#!-ReportDaily 'ReportDaily')
+Сервис обработки данные для [ReportDaily](#T-WebArg-CurrencyRates-Storage-Models-ReportDaily 'WebArg.CurrencyRates.Storage.Models.ReportDaily')
 
 <a name='M-WebArg-CurrencyRates-Logic-Services-ReportDailyService-GetDays-System-DateOnly,System-DateOnly-'></a>
 ### GetDays(start,end) `method`

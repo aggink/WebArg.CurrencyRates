@@ -3,7 +3,6 @@
 
 ## Contents
 
-- [ArgumentQueryException](#T-WebArg-CurrencyRates-WebAPI-Exceptions-ArgumentQueryException 'WebArg.CurrencyRates.WebAPI.Exceptions.ArgumentQueryException')
 - [CurrencyRate](#T-WebArg-CurrencyRates-WebAPI-Features-DtoModels-CurrencyRate 'WebArg.CurrencyRates.WebAPI.Features.DtoModels.CurrencyRate')
   - [Code](#P-WebArg-CurrencyRates-WebAPI-Features-DtoModels-CurrencyRate-Code 'WebArg.CurrencyRates.WebAPI.Features.DtoModels.CurrencyRate.Code')
   - [Date](#P-WebArg-CurrencyRates-WebAPI-Features-DtoModels-CurrencyRate-Date 'WebArg.CurrencyRates.WebAPI.Features.DtoModels.CurrencyRate.Date')
@@ -38,17 +37,6 @@
   - [AddSwaggerSetup(services)](#M-WebArg-CurrencyRates-WebAPI-Extensions-ServiceCollectionExtensions-AddSwaggerSetup-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'WebArg.CurrencyRates.WebAPI.Extensions.ServiceCollectionExtensions.AddSwaggerSetup(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
   - [AddWebMappers(services)](#M-WebArg-CurrencyRates-WebAPI-Extensions-ServiceCollectionExtensions-AddWebMappers-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'WebArg.CurrencyRates.WebAPI.Extensions.ServiceCollectionExtensions.AddWebMappers(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
   - [AddWebServices(services)](#M-WebArg-CurrencyRates-WebAPI-Extensions-ServiceCollectionExtensions-AddWebServices-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'WebArg.CurrencyRates.WebAPI.Extensions.ServiceCollectionExtensions.AddWebServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
-
-<a name='T-WebArg-CurrencyRates-WebAPI-Exceptions-ArgumentQueryException'></a>
-## ArgumentQueryException `type`
-
-##### Namespace
-
-WebArg.CurrencyRates.WebAPI.Exceptions
-
-##### Summary
-
-Ошибка параметра запроса
 
 <a name='T-WebArg-CurrencyRates-WebAPI-Features-DtoModels-CurrencyRate'></a>
 ## CurrencyRate `type`

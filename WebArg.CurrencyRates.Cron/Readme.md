@@ -10,7 +10,7 @@
 - [IApiCronService](#T-WebArg-CurrencyRates-Cron-Refit-IApiCronService 'WebArg.CurrencyRates.Cron.Refit.IApiCronService')
   - [GetDailyReport(date,cancellationToken)](#M-WebArg-CurrencyRates-Cron-Refit-IApiCronService-GetDailyReport-System-String,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Cron.Refit.IApiCronService.GetDailyReport(System.String,System.Threading.CancellationToken)')
 - [ICronService](#T-WebArg-CurrencyRates-Cron-Interfaces-Services-ICronService 'WebArg.CurrencyRates.Cron.Interfaces.Services.ICronService')
-  - [GetReportAsync(date,cancellationToken)](#M-WebArg-CurrencyRates-Cron-Interfaces-Services-ICronService-GetReportAsync-System-DateOnly,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Cron.Interfaces.Services.ICronService.GetReportAsync(System.DateOnly,System.Threading.CancellationToken)')
+  - [DownloadReportAsync(date,cancellationToken)](#M-WebArg-CurrencyRates-Cron-Interfaces-Services-ICronService-DownloadReportAsync-System-DateOnly,System-Threading-CancellationToken- 'WebArg.CurrencyRates.Cron.Interfaces.Services.ICronService.DownloadReportAsync(System.DateOnly,System.Threading.CancellationToken)')
 - [RefitException](#T-WebArg-CurrencyRates-Cron-Exceptions-RefitException 'WebArg.CurrencyRates.Cron.Exceptions.RefitException')
 - [RefitExtensions](#T-WebArg-CurrencyRates-Cron-Extensions-RefitExtensions 'WebArg.CurrencyRates.Cron.Extensions.RefitExtensions')
   - [GetRequestMessage\`\`1(response)](#M-WebArg-CurrencyRates-Cron-Extensions-RefitExtensions-GetRequestMessage``1-Refit-IApiResponse{``0}- 'WebArg.CurrencyRates.Cron.Extensions.RefitExtensions.GetRequestMessage``1(Refit.IApiResponse{``0})')
@@ -124,8 +124,8 @@ WebArg.CurrencyRates.Cron.Interfaces.Services
 
 Сервис запросов данных о курсе чешской кроны
 
-<a name='M-WebArg-CurrencyRates-Cron-Interfaces-Services-ICronService-GetReportAsync-System-DateOnly,System-Threading-CancellationToken-'></a>
-### GetReportAsync(date,cancellationToken) `method`
+<a name='M-WebArg-CurrencyRates-Cron-Interfaces-Services-ICronService-DownloadReportAsync-System-DateOnly,System-Threading-CancellationToken-'></a>
+### DownloadReportAsync(date,cancellationToken) `method`
 
 ##### Summary
 

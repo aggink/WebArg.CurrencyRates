@@ -24,7 +24,7 @@ public sealed class CronService : ICronService
         _logger = logger;
     }
 
-    public async Task<ReportDailyDto> GetReportAsync(DateOnly date, CancellationToken cancellationToken)
+    public async Task<ReportDailyDto> DownloadReportAsync(DateOnly date, CancellationToken cancellationToken)
     {
         var response = await _apiCronService.GetDailyReport(date.ToString(), cancellationToken);
         response.RefitResponseValidate(_logger);

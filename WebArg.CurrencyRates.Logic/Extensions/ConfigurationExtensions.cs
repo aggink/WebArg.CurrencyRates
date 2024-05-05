@@ -12,11 +12,13 @@ public static class ConfigurationExtensions
     /// Получить строку подключения к БД
     /// </summary>
     /// <param name="configuration">Набор свойств конфигурации</param>
-    /// <returns></returns>
+    /// <returns>Строка подключения к БД</returns>
     /// <exception cref="LogicException">Данные не найдены</exception>
     public static string GetDefaultConnectionString(this IConfiguration configuration)
     {
-        return configuration.GetConnectionString("DefaultConnection")
-            ?? throw new LogicException("DefaultConnection не найдено");
+        var stringConnection = configuration.GetConnectionString("DefaultConnection");
+        return !string.IsNullOrEmpty(stringConnection)
+            ? stringConnection
+            : throw new LogicException("DefaultConnection не найден или пуст");
     }
 }

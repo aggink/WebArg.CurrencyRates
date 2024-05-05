@@ -3,6 +3,7 @@
 
 ## Contents
 
+- [ArgumentQueryException](#T-WebArg-CurrencyRates-WebAPI-Exceptions-ArgumentQueryException 'WebArg.CurrencyRates.WebAPI.Exceptions.ArgumentQueryException')
 - [ErrorResponse](#T-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponse 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponse')
   - [Code](#P-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponse-Code 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponse.Code')
   - [Details](#P-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponse-Details 'WebArg.CurrencyRates.Web.Common.Middlewares.DtoModels.ErrorResponse.Details')
@@ -19,6 +20,17 @@
   - [GetBadRequestResult(validationResult)](#M-WebArg-CurrencyRates-Web-Common-DataAnnotations-ValidateUsingFluentValidationAttribute-GetBadRequestResult-FluentValidation-Results-ValidationResult- 'WebArg.CurrencyRates.Web.Common.DataAnnotations.ValidateUsingFluentValidationAttribute.GetBadRequestResult(FluentValidation.Results.ValidationResult)')
   - [IsCustomType(type)](#M-WebArg-CurrencyRates-Web-Common-DataAnnotations-ValidateUsingFluentValidationAttribute-IsCustomType-System-Type- 'WebArg.CurrencyRates.Web.Common.DataAnnotations.ValidateUsingFluentValidationAttribute.IsCustomType(System.Type)')
   - [ToFluentModelState(validationResult)](#M-WebArg-CurrencyRates-Web-Common-DataAnnotations-ValidateUsingFluentValidationAttribute-ToFluentModelState-FluentValidation-Results-ValidationResult- 'WebArg.CurrencyRates.Web.Common.DataAnnotations.ValidateUsingFluentValidationAttribute.ToFluentModelState(FluentValidation.Results.ValidationResult)')
+
+<a name='T-WebArg-CurrencyRates-WebAPI-Exceptions-ArgumentQueryException'></a>
+## ArgumentQueryException `type`
+
+##### Namespace
+
+WebArg.CurrencyRates.WebAPI.Exceptions
+
+##### Summary
+
+Ошибка параметра запроса
 
 <a name='T-WebArg-CurrencyRates-Web-Common-Middlewares-DtoModels-ErrorResponse'></a>
 ## ErrorResponse `type`

@@ -4,6 +4,7 @@ using WebArg.CurrencyRates.Logic.DtoModels;
 using WebArg.CurrencyRates.Logic.Interfaces.Repositories;
 using WebArg.CurrencyRates.Logic.Interfaces.Services;
 using WebArg.CurrencyRates.Storage.Database;
+using WebArg.CurrencyRates.Storage.Models;
 
 namespace WebArg.CurrencyRates.Logic.Services;
 
@@ -41,11 +42,11 @@ public class ReportDailyService : IReportDailyService
         return reports;
     }
 
-    public async Task AddReportAsync(DataContext dataContext, DateOnly start, DateOnly end, CancellationToken cancellationToken = default)
+    public async Task DownloadReportAsync(DataContext dataContext, DateOnly start, DateOnly end, CancellationToken cancellationToken = default)
     {
         foreach (var day in GetDays(start, end))
         {
-            var report = await _cronService.GetReportAsync(day, cancellationToken);
+            var report = await _cronService.DownloadReportAsync(day, cancellationToken);
             await _repository.AddReportAsync(dataContext, report, cancellationToken);
         }
     }
