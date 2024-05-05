@@ -1,5 +1,5 @@
 <a name='assembly'></a>
-# WebArg.CurrencyRates
+# WebArg.CurrencyRates.WebAPI
 
 ## Contents
 
