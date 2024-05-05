@@ -7,6 +7,9 @@ using WebArg.CurrencyRates.Storage.Database;
 
 namespace WebArg.CurrencyRates.Logic.Services;
 
+/// <summary>
+/// Сервис обработки данные для <see cref="ReportDaily"/>
+/// </summary>
 public class ReportDailyService : IReportDailyService
 {
     private readonly IRepository _repository;

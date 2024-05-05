@@ -20,6 +20,7 @@
   - [DateTo](#P-WebArg-CurrencyRates-Logic-DtoModels-ReportDto-DateTo 'WebArg.CurrencyRates.Logic.DtoModels.ReportDto.DateTo')
   - [Max](#P-WebArg-CurrencyRates-Logic-DtoModels-ReportDto-Max 'WebArg.CurrencyRates.Logic.DtoModels.ReportDto.Max')
   - [Min](#P-WebArg-CurrencyRates-Logic-DtoModels-ReportDto-Min 'WebArg.CurrencyRates.Logic.DtoModels.ReportDto.Min')
+- [Repository](#T-WebArg-CurrencyRates-Logic-Repositories-Repository 'WebArg.CurrencyRates.Logic.Repositories.Repository')
 - [ServiceCollectionExtensions](#T-WebArg-CurrencyRates-Logic-Extensions-ServiceCollectionExtensions 'WebArg.CurrencyRates.Logic.Extensions.ServiceCollectionExtensions')
   - [AddLogicServices(services)](#M-WebArg-CurrencyRates-Logic-Extensions-ServiceCollectionExtensions-AddLogicServices-Microsoft-Extensions-DependencyInjection-IServiceCollection- 'WebArg.CurrencyRates.Logic.Extensions.ServiceCollectionExtensions.AddLogicServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)')
 
@@ -157,6 +158,10 @@ WebArg.CurrencyRates.Logic.Exceptions
 
 WebArg.CurrencyRates.Logic.Services
 
+##### Summary
+
+Сервис обработки данные для [](#!-ReportDaily 'ReportDaily')
+
 <a name='M-WebArg-CurrencyRates-Logic-Services-ReportDailyService-GetDays-System-DateOnly,System-DateOnly-'></a>
 ### GetDays(start,end) `method`
 
@@ -227,6 +232,17 @@ WebArg.CurrencyRates.Logic.DtoModels
 ##### Summary
 
 Минимальное значение
+
+<a name='T-WebArg-CurrencyRates-Logic-Repositories-Repository'></a>
+## Repository `type`
+
+##### Namespace
+
+WebArg.CurrencyRates.Logic.Repositories
+
+##### Summary
+
+CRUD методы для [ReportDaily](#T-WebArg-CurrencyRates-Storage-Models-ReportDaily 'WebArg.CurrencyRates.Storage.Models.ReportDaily')
 
 <a name='T-WebArg-CurrencyRates-Logic-Extensions-ServiceCollectionExtensions'></a>
 ## ServiceCollectionExtensions `type`

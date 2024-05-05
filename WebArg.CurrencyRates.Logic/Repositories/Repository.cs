@@ -5,6 +5,9 @@ using WebArg.CurrencyRates.Storage.Models;
 
 namespace WebArg.CurrencyRates.Logic.Repositories;
 
+/// <summary>
+/// CRUD методы для <see cref="ReportDaily"/>
+/// </summary>
 public sealed class Repository : IRepository
 {
     public async Task AddReportAsync(DataContext dataContext, ReportDailyDto report, CancellationToken cancellationToken = default)
