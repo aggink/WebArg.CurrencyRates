@@ -46,7 +46,7 @@ public class MigrationService
                 {
                     var migrations = dbContext.Database.GetPendingMigrations().ToArray();
                     if (migrations.Length == 0)
-                        throw new Exception("Migrations not found");
+                        throw new Exception("Миграции не найдены (возможно не указана ссылка на сборку с миграциями)");
 
                     dbContext!.Database.Migrate();
                     dbContext!.SaveChanges();

@@ -5,6 +5,8 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using WebArg.CurrencyRates.Logic.Extensions;
 using WebArg.CurrencyRates.Storage.Database;
+using WebArg.CurrencyRates.Storage.MS_SQL;
+using WebArg.CurrencyRates.Storage.MS_SQL.Services;
 using WebArg.CurrencyRates.WebAPI.Features.Mappers;
 
 namespace WebArg.CurrencyRates.WebAPI.Extensions;
@@ -20,6 +22,8 @@ public static class ServiceCollectionExtensions
     /// <param name="services">Коллекция дескрипторов служб</param>
     public static void AddWebServices(this IServiceCollection services)
     {
+        services.AddSingleton<MigrationService>();
+
         services.AddLogicServices();
     }
 
@@ -34,6 +38,7 @@ public static class ServiceCollectionExtensions
             options.UseSqlServer(configuration.GetDefaultConnectionString(), o =>
             {
                 o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+                o.MigrationsAssembly(typeof(SqlServerContextFactory).Namespace);
             }));
     }
 

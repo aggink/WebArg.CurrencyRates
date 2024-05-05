@@ -1,6 +1,7 @@
 using Serilog;
 using WebArg.CurrencyRates.Quartz.Extensions;
 using WebArg.CurrencyRates.Quartz.Middlewares;
+using WebArg.CurrencyRates.Storage.MS_SQL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,10 @@ builder.Services.AddQuartzServices();
 builder.Services.RegisterQuartzServices(builder.Configuration);
 
 var app = builder.Build();
+
+using var scope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+var migrationService = scope.ServiceProvider.GetRequiredService<MigrationService>();
+migrationService.ApplyMigrations();
 
 app.UseHttpsRedirection();
 

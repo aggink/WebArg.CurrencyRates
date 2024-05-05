@@ -1,4 +1,5 @@
 using Serilog;
+using WebArg.CurrencyRates.Storage.MS_SQL.Services;
 using WebArg.CurrencyRates.WebAPI.Extensions;
 using WebArg.CurrencyRates.WebAPI.Middlewares;
 
@@ -18,8 +19,13 @@ builder.Host.UseSerilog((context, Configuration) =>
 builder.Services.AddFluentValidationSetup(typeof(Program));
 builder.Services.AddSwaggerSetup();
 builder.Services.AddWebServices();
+builder.Services.AddWebMappers();
 
 var app = builder.Build();
+
+using var scope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+var migrationService = scope.ServiceProvider.GetRequiredService<MigrationService>();
+migrationService.ApplyMigrations();
 
 app.UseHttpsRedirection();
 

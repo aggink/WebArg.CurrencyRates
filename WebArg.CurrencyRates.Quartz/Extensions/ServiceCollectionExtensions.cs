@@ -8,6 +8,8 @@ using System.Reflection;
 using WebArg.CurrencyRates.Logic.Extensions;
 using WebArg.CurrencyRates.Quartz.Jobs;
 using WebArg.CurrencyRates.Storage.Database;
+using WebArg.CurrencyRates.Storage.MS_SQL;
+using WebArg.CurrencyRates.Storage.MS_SQL.Services;
 
 namespace WebArg.CurrencyRates.Quartz.Extensions;
 
@@ -27,6 +29,8 @@ public static class ServiceCollectionExtensions
     /// <param name="services">Коллекция дескрипторов служб</param>
     public static void AddQuartzServices(this IServiceCollection services)
     {
+        services.AddSingleton<MigrationService>();
+
         services.AddLogicServices();
     }
 
@@ -41,6 +45,7 @@ public static class ServiceCollectionExtensions
         options.UseSqlServer(configuration.GetDefaultConnectionString(), o =>
         {
             o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
+            o.MigrationsAssembly(typeof(SqlServerContextFactory).Namespace);
         }));
     }
 
